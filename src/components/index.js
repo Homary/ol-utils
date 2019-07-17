@@ -3,11 +3,13 @@ import createFeature from './src/createFeature';
 import createLayer from './src/createLayer';
 import addEvent from './src/addEvent';
 import addCustomEvent from './src/addCustomEvent';
+import createCluster from './src/createCluster';
 
 export {
-    render,
-    createFeature,
-    createLayer,
-    addEvent,
-    addCustomEvent
-}
+	render,
+	addEvent,
+	addCustomEvent,
+	createFeature,
+	createLayer,
+	createCluster
+};
