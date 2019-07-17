@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>ol-utils</title>
+    <title>JSDoc: Global</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -530,7 +530,8 @@
 
 
 <div class="description">
-    创建聚合图层
+    创建聚合图层  
+实现聚合点位效果
 </div>
 
 
@@ -741,7 +742,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="createCluster.js.html">createCluster.js</a>, <a href="createCluster.js.html#line15">line 15</a>
+        <a href="createCluster.js.html">createCluster.js</a>, <a href="createCluster.js.html#line16">line 16</a>
     </li></ul></dd>
     
 
@@ -1151,7 +1152,7 @@
     
 
     
-    <h4 class="name" id="render"><span class="type-signature"></span>render<span class="signature">(target, url, center)</span><span class="type-signature"> &rarr; {Map}</span></h4>
+    <h4 class="name" id="createOverlay"><span class="type-signature"></span>createOverlay<span class="signature">(elID, coord, offset)</span><span class="type-signature"> &rarr; {overlay}</span></h4>
     
 
     
@@ -1159,7 +1160,209 @@
 
 
 <div class="description">
-    渲染地图
+    创建弹窗图层  
+将已有的DOM节点转化为地图图层,实现地图上弹窗功能
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>elID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">节点ID</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>coord</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">经纬度</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>offset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">偏移距离 [向上, 向右]; default: [0, 0]</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="createOverlay.js.html">createOverlay.js</a>, <a href="createOverlay.js.html#line11">line 11</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">overlay</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="render"><span class="type-signature"></span>render<span class="signature">(target, url, center, layers)</span><span class="type-signature"> &rarr; {Map}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    创建地图
 </div>
 
 
@@ -1211,7 +1414,7 @@
 
             
 
-            <td class="description last">节点ID</td>
+            <td class="description last">地图挂载节点ID</td>
         </tr>
 
     
@@ -1258,6 +1461,29 @@
             
 
             <td class="description last">地图中心点</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>layers</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">图层, default: 基础底图</td>
         </tr>
 
     
@@ -1326,6 +1552,10 @@
 <h5>Returns:</h5>
 
         
+<div class="param-desc">
+    地图实例
+</div>
+
 
 
 <dl>
@@ -1362,13 +1592,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#addCustomEvent">addCustomEvent</a></li><li><a href="global.html#addEvent">addEvent</a></li><li><a href="global.html#createCluster">createCluster</a></li><li><a href="global.html#createFeature">createFeature</a></li><li><a href="global.html#createLayer">createLayer</a></li><li><a href="global.html#render">render</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#addCustomEvent">addCustomEvent</a></li><li><a href="global.html#addEvent">addEvent</a></li><li><a href="global.html#createCluster">createCluster</a></li><li><a href="global.html#createFeature">createFeature</a></li><li><a href="global.html#createLayer">createLayer</a></li><li><a href="global.html#createOverlay">createOverlay</a></li><li><a href="global.html#render">render</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Wed Jul 17 2019 14:42:12 GMT+0800 (GMT+08:00)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Wed Jul 17 2019 16:16:10 GMT+0800 (GMT+08:00)
 </footer>
 
 <script> prettyPrint(); </script>

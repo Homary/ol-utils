@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: addCustomEvent.js</title>
+    <title>JSDoc: Source: createOverlay.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: addCustomEvent.js</h1>
+    <h1 class="page-title">Source: createOverlay.js</h1>
 
     
 
@@ -26,25 +26,34 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * 添加自定义事件
- * @param {Map} map Map实例对象
- * @param {string} mapEvent 需要在地图上注册的事件
- * @param {Feature} feature Feature实例对象
- * @param {string} featureEvent feature上注册的自定义事件名
- * @param {function} fn 触发自定义事件的回调函数
+            <pre class="prettyprint source linenums"><code>import Overlay from 'ol/Overlay';
+
+/**
+ * 创建弹窗图层  
+ * 将已有的DOM节点转化为地图图层,实现地图上弹窗功能  
+ * @param {string} elID 节点ID
+ * @param {array} coord 经纬度
+ * @param {array} offset 偏移距离 [向上, 向右]; default: [0, 0]
+ * @return {overlay}
  */
-const addCustomEvent = (map, mapEvent, feature, featureEvent, fn) => {
-	map.on(mapEvent, event => {
-		map.forEachFeatureAtPixel(event.pixel, feature => {
-			feature.dispatchEvent({ type: featureEvent, event: event });
-		});
-	});
+function createOverlay(elID, coord, offset = [0, 0]) {
+	let container = document.getElementById(elID);
+	let overlay = new Overlay(
+		/** @type {olx.OverlayOptions} */ ({
+			element: container,
+			autoPan: true,
+			autoPanAnimation: {
+				duration: 250
+			},
+			offset: offset
+		})
+	);
+    overlay.setPosition(coord);
 
-	feature.on(featureEvent, fn);
-};
+	return overlay;
+}
 
-export default addCustomEvent;</code></pre>
+export default createOverlay;</code></pre>
         </article>
     </section>
 

@@ -174,10 +174,13 @@ h3
 
 h4
 {
+    padding: 10px 0;
+    margin: 10px 0;
     font-size: 18px;
     letter-spacing: -0.33px;
     margin-bottom: 12px;
     color: #4d4e53;
+    background: #EEE;
 }
 
 h5, .container-overview .subsection-title
