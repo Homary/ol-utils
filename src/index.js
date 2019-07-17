@@ -1,8 +1,4 @@
-import render from '@/components/render';
-import createFeature from '@/components/createFeature';
-import createLayer from '@/components/createLayer';
-import addEvent from '@/components/addEvent';
-import addCustomEvent from '@/components/addCustomEvent';
+import { render, createFeature, createLayer } from 'ol-utils';
 
 // img
 import orange from '@/img/orange.png';

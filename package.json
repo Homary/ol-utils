@@ -13,6 +13,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"ol": "^5.3.3",
+		"ol-utils": "^1.0.0",
 		"react": "^16.8.5",
 		"react-dom": "^16.8.5",
 		"vue": "^2.6.10",

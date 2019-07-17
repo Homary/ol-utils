@@ -7,7 +7,7 @@ import Select from 'ol/interaction/Select.js';
  * @param {singleclick | click | pointmove} type 事件类型
  * @param {function} fn 回调函数
  */
-const mapEvent = (map, type, fn) => {
+const addEvent = (map, type, fn) => {
     let _type = type;
     let select = null,
         selectSingleClick = new Select(),
@@ -43,4 +43,4 @@ const mapEvent = (map, type, fn) => {
 	map.addInteraction(select);
 };
 
-export default mapEvent;
+export default addEvent;

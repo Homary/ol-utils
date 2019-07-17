@@ -1,0 +1,22 @@
+{
+  "name": "ol-utils",
+  "version": "1.0.0",
+  "description": "tools of openlayer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Homary/ol-utils.git"
+  },
+  "keywords": [
+    "openlayer"
+  ],
+  "author": "Homary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Homary/ol-utils/issues"
+  },
+  "homepage": "https://github.com/Homary/ol-utils#readme"
+}
