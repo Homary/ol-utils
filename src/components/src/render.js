@@ -3,13 +3,12 @@ import { Tile } from 'ol/layer';
 import { XYZ } from 'ol/source';
 
 /**
- * 渲染地图
- * @param {el} target 节点ID
+ * 创建地图  
+ * @param {el} target 地图挂载节点ID
  * @param {string} url 地图地址
  * @param {array} center 地图中心点
- * @param {array} layers 图层
- * 
- * @return {Map}
+ * @param {array} layers 图层, default: 基础底图
+ * @return {Map} 地图实例
  */
 function render(target, url, center, layers = []) {
     let tile = new Tile({

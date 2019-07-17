@@ -4,7 +4,8 @@ import ClusterSource from 'ol/source/Cluster';
 import { Style, Icon, Text, Fill } from 'ol/style';
 
 /**
- * 创建聚合图层
+ * 创建聚合图层  
+ * 实现聚合点位效果
  * @param {Feature<array>} features 点位数组
  * @param {img} icon 图标
  * @param {string} name 图层名

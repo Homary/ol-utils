@@ -1,7 +1,8 @@
 import Overlay from 'ol/Overlay';
 
 /**
- * 创建弹窗图层
+ * 创建弹窗图层  
+ * 将已有的DOM节点转化为地图图层,实现地图上弹窗功能  
  * @param {string} elID 节点ID
  * @param {array} coord 经纬度
  * @param {array} offset 偏移距离 [向上, 向右]; default: [0, 0]
