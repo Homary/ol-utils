@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Global</title>
+    <title>ol-utils</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -522,6 +522,279 @@
     
 
     
+    <h4 class="name" id="createCluster"><span class="type-signature"></span>createCluster<span class="signature">(features, icon, name, distance, scale)</span><span class="type-signature"> &rarr; {LayerVector}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    创建聚合图层
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>features</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Feature.&lt;array></span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">点位数组</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>icon</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">img</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">图标</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">图层名</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>distance</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    40
+                
+                </td>
+            
+
+            <td class="description last">聚合距离,default: 40</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scale</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    0.6
+                
+                </td>
+            
+
+            <td class="description last">图标大小, default: .6</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="createCluster.js.html">createCluster.js</a>, <a href="createCluster.js.html#line15">line 15</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">LayerVector</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
     <h4 class="name" id="createFeature"><span class="type-signature"></span>createFeature<span class="signature">(coord, icon, scale)</span><span class="type-signature"></span></h4>
     
 
@@ -615,7 +888,7 @@
                 </td>
             
 
-            <td class="description last">图标</td>
+            <td class="description last">图标,创建聚合图层时可不传</td>
         </tr>
 
     
@@ -1089,13 +1362,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#addCustomEvent">addCustomEvent</a></li><li><a href="global.html#addEvent">addEvent</a></li><li><a href="global.html#createFeature">createFeature</a></li><li><a href="global.html#createLayer">createLayer</a></li><li><a href="global.html#render">render</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#addCustomEvent">addCustomEvent</a></li><li><a href="global.html#addEvent">addEvent</a></li><li><a href="global.html#createCluster">createCluster</a></li><li><a href="global.html#createFeature">createFeature</a></li><li><a href="global.html#createLayer">createLayer</a></li><li><a href="global.html#render">render</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Wed Jul 17 2019 09:06:36 GMT+0800 (GMT+08:00)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Wed Jul 17 2019 14:42:12 GMT+0800 (GMT+08:00)
 </footer>
 
 <script> prettyPrint(); </script>

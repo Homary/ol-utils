@@ -1,4 +1,8 @@
 import { render } from 'ol-utils';
+import { createCluster, createLayer, createFeature, createOverlay } from '@/components';
+import { Style } from 'ol/style';
+
+import orange from '@/img/orange.png';
 
 window.onload = function() {
 	let url =
@@ -7,4 +11,33 @@ window.onload = function() {
 	let center = [112.55, 28.27];
 
 	let map = render(elID, url, center);
+
+	let features = [];
+
+	for (let i = 0; i < 50; i++) {
+		let lon = 112.55 + i * 0.001;
+		let lat = 28.27 + i * Math.random() * 0.005;
+		let feature = createFeature([lon, lat]);
+		features.push(feature);
+	}
+
+	let cluster = createCluster(features, orange, 'test');
+    map.addLayer(cluster);
+    
+    addDialog();
+
+    let overlay = createOverlay('over', center, [0, 0]);
+
+    map.addOverlay(overlay)
 };
+
+function addDialog() {
+   let div = document.createElement('div');
+
+   div.id = 'over';
+   div.style.width = '300px';
+   div.style.height = '300px';
+   div.style.background = '#666';
+
+   document.getElementById('app').appendChild(div);
+}

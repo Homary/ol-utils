@@ -4,6 +4,7 @@ import createLayer from './src/createLayer';
 import addEvent from './src/addEvent';
 import addCustomEvent from './src/addCustomEvent';
 import createCluster from './src/createCluster';
+import createOverlay from './src/createOverlay';
 
 export {
 	render,
@@ -11,5 +12,6 @@ export {
 	addCustomEvent,
 	createFeature,
 	createLayer,
-	createCluster
+	createCluster,
+	createOverlay
 };
