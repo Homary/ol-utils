@@ -10,7 +10,7 @@ import layerVector from 'ol/layer/Vector';
 function createLayer(features, extra) {
 	let obj = Object.assign({
 		source: new sourceVector({
-			features: feattures
+			features: features
 		}),
 		extra
 	});
