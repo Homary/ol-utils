@@ -1,12 +1,7 @@
-import {
-	render,
-	createLayer,
-	createFeature,
-	addEvent
-} from 'ol-utils';
-import { addCustomEvent } from '@/components';
+import { render, createLayer, createFeature, addEvent } from 'ol-utils';
+import { addCustomEvent, flashMarker } from '@/components';
 
-import {Style, Circle, Fill} from 'ol/style';
+import { Style, Circle, Fill } from 'ol/style';
 
 import orange from '@/img/orange.png';
 
@@ -16,25 +11,42 @@ window.onload = function() {
 	let elID = 'app';
 	let center = [112.55, 28.27];
 	let map = render(elID, url, center);
-    let feature = createFeature(center, orange);
-    
-    // 设置值
-    feature.set('greet', 'this is a icon on map');
+	let feature = createFeature(center, orange);
+
+	// 设置值
+	feature.set('greet', 'this is a icon on map');
 
 	let layer = createLayer();
+
+    layer.getSource().addFeature(feature);
     
-	layer.getSource().addFeature(feature);
+    layer.setZIndex(100)
 	map.addLayer(layer);
+	console.log((feature.getStyle().getImage().anchor_ = [0.5, 1]));
+
+	let coord = map.getPixelFromCoordinate([80.995107, 43.939732]);
+	console.log(coord);
+
+	new flashMarker(map, [
+		{
+			name: '中心',
+			lnglat: [112.55, 28.27],
+			color: '#E7330D',
+			type: 'ellipse',
+			speed: 0.5,
+			max: 55
+		}
+	]);
 
 	// 添加事件
-	addEvent(map, 'singleclick', (e) => {
-        console.log(e);
-        
-        // 获得点位的值
-        let greet = e.selected[0].get('greet');
+	addEvent(map, 'singleclick', e => {
+		console.log(e);
 
-	    alert(greet);
-    })
+		// 获得点位的值
+		let greet = e.selected[0].get('greet');
+
+		alert(greet);
+	});
 };
 
 function addDialog() {

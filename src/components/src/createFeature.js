@@ -12,18 +12,18 @@ import { Style, Icon } from 'ol/style';
 function createFeature(coord, icon, scale = 0.6) {
 	let feature = new Feature({
 		geometry: new pointGeom(coord)
-    });
-    
-    if(icon) {
-        feature.setStyle(
-            new Style({
-                image: new Icon({
-                    src: icon,
-                    scale: scale
-                })
-            })
-        );
-    }
+	});
+
+	if (icon) {
+		feature.setStyle(
+			new Style({
+				image: new Icon({
+					src: icon,
+					scale: scale
+				})
+			})
+		);
+	}
 
 	return feature;
 }

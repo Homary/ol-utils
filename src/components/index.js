@@ -5,6 +5,7 @@ import addEvent from './src/addEvent';
 import addCustomEvent from './src/addCustomEvent';
 import createCluster from './src/createCluster';
 import createOverlay from './src/createOverlay';
+import flashMarker from './src/flashMarker';
 
 export {
 	render,
@@ -13,5 +14,6 @@ export {
 	createFeature,
 	createLayer,
 	createCluster,
-	createOverlay
+	createOverlay,
+	flashMarker
 };
